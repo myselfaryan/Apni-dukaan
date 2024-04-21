@@ -15,7 +15,8 @@ app.use(cors({
   }));
 
 // Connect to MongoDB
-mongoose.connect('mongodb://sudip:sudiphalder@localhost:27017/?authMechanism=DEFAULT', {
+// mongoose.connect('mongodb://sudip:sudiphalder@localhost:27017/?authMechanism=DEFAULT', {
+mongoose.connect('mongodb://localhost:27017/', {
     dbName: 'seller_app',
     useNewUrlParser: true,
     useUnifiedTopology: true
