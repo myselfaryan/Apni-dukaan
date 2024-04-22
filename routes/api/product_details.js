@@ -14,7 +14,7 @@ router.get('/ping', (req, res) => {
 // Set up multer with custom storage
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, './public/uploads/product_images/')
+        cb(null, './uploads/product_images/')
     },
     filename: function (req, file, cb) {
         // Rename the file to the current timestamp

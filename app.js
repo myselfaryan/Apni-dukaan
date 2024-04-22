@@ -39,8 +39,11 @@ mongoose
 const authRoute = require("./routes/api/auth");
 const productRoute = require("./routes/api/product_details");
 const userRoute = require("./routes/api/user");
+const urls = require("./routes/urls");
+
 
 // Use Routes
+app.use("/", urls);
 app.use("/api/auth", authRoute);
 app.use("/api/product", productRoute);
 app.use("/api/user", userRoute);

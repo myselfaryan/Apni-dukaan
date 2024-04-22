@@ -63,7 +63,7 @@ router.post("/profile-image", upload.none(), async (req, res) => {
     }
     const imagePath = path.join(
       __dirname,
-      "../../public/uploads/profile_images/",
+      "../../uploads/profile_images/",
       user_details.profile_image_id,
     );
     res.sendFile(imagePath);
