@@ -11,9 +11,9 @@ const crypto = require('crypto');
 const multer = require('multer');
 const upload = multer();
 
-
+const path = require('path');
 router.get('/ping', (req, res) => {
-  res.send('Namaste! Welcome to the auth API.');
+  res.sendFile(path.join(__dirname, '../../public/views/index.html'));
   console.log('Request at /ping');
 });
 
