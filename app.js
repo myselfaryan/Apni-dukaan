@@ -36,10 +36,10 @@ mongoose
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));
 
-const authRoute = require("./routes/api/auth");
-const productRoute = require("./routes/api/product_details");
-const userRoute = require("./routes/api/user");
-const urls = require("./routes/urls");
+const authRoute = require("./controller/auth");
+const productRoute = require("./controller/product_details");
+const userRoute = require("./controller/user");
+const urls = require("./urls");
 
 
 // Use Routes

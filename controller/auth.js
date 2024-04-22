@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 // const bcrypt = require('bcryptjs');
-const UserAuth = require('../../models/user_auth_model');
-const TempUser = require('../../models/temp_user_auth_model');
-const UserDetails = require('../../models/user_model');
-const BusinessInfo = require('../../models/business_info_model');
+const UserAuth = require('../models/user_auth_model');
+const TempUser = require('../models/temp_user_auth_model');
+const UserDetails = require('../models/user_model');
+const BusinessInfo = require('../models/business_info_model');
 
 const crypto = require('crypto');
 

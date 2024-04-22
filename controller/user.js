@@ -1,7 +1,7 @@
 const path = require("path");
-const UserAuth = require("../../models/user_auth_model");
-const UserDetails = require("../../models/user_model");
-const BusinessInfo = require("../../models/business_info_model");
+const UserAuth = require("../models/user_auth_model");
+const UserDetails = require("../models/user_model");
+const BusinessInfo = require("../models/business_info_model");
 
 const express = require("express");
 const router = express.Router();
@@ -63,7 +63,7 @@ router.post("/profile-image", upload.none(), async (req, res) => {
     }
     const imagePath = path.join(
       __dirname,
-      "../../uploads/profile_images/",
+      "../uploads/profile_images/",
       user_details.profile_image_id,
     );
     res.sendFile(imagePath);
