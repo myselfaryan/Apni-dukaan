@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
-const Product = require('../../models/product_details_model');
-const UserAuth = require('../../models/user_auth_model');
+const Product = require('../models/product_details_model');
+const UserAuth = require('../models/user_auth_model');
 
 router.get('/ping', (req, res) => {
     res.send('Namaste! Welcome to the products API.');
@@ -14,7 +14,7 @@ router.get('/ping', (req, res) => {
 // Set up multer with custom storage
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, './public/uploads/product_images/')
+        cb(null, './uploads/product_images/')
     },
     filename: function (req, file, cb) {
         // Rename the file to the current timestamp

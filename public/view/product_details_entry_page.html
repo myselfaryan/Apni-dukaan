@@ -1,0 +1,76 @@
+<h1 id="page-title"> Add pr</div>oduct</h1>
+<form id="product-details-form">
+    <div id="product-details-entry-page">
+        <div id="left-panel">
+
+            <div id="title-description-container" class="details-container">
+                <h3 class="input-title">Product title</h3>
+                <input id="product-title" type="text" class="input-container" placeholder="Enter product title" required>
+                <h3 class="input-title">Product Description</h3>
+                <textarea id="product-description" class="input-container"
+                    placeholder="Write product description here" required></textarea>
+            </div>
+
+            <div id="general-info-container" class="details-container">
+                <h3 class="input-title">Manufacturer name</h3>
+                <input id="manufacturer-name" type="text" class="input-container" placeholder="Enter manufacturer name" required>
+
+                <h3 class="input-title">Brand</h3>
+                <input id="brand-name" type="text" class="input-container" placeholder="Enter brand name" required>
+
+                <h3 class="input-title">Original price</h3>
+                <input id="original-price" type="text" class="input-container" placeholder="Enter price" required>
+
+                <h3 class="input-title">Discount (%) </h3>
+                <input id="discounts-percentage" type="text" maxlength="2" class="input-container" placeholder="Enter discounts/offers if any" required>
+
+                <!-- <h3 class="input-title">Sizes available</h3>
+                <input type="text" class="input-container" placeholder="Enter the"> -->
+            </div>
+            
+            <div class="details-container">
+                <h3 class="input-title">Upload product image</h3>
+                <label for="dropzone-file">
+                    <div class="image-upload-container">
+                        <img id="upload-icon" src="./static/images/upload_icon.svg">
+                        <p class="upload-input-placeholder"><span style="font-weight: 600;">Click to upload</span> or drag
+                            and drop</p>
+                        <p class="upload-input-placeholder">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+                    </div>
+                    <input id="dropzone-file" type="file" class="hidden" />
+                </label>
+            </div>
+
+        </div>
+        <div id="right-panel">
+
+            <div id="category-container" class="drop-down-container">
+
+                <h3 class="input-title">Status</h3>
+                <select id="status" class="drop-down" required>
+                    <option value="draft">Draft</option>
+                    <option value="published">Published</option>
+                </select>
+
+                <h3 class="input-title">Visibility</h3>
+                <select id="visibility" class="drop-down" required>
+                    <option value="public">Public</option>
+                    <option value="hidden">Hidden</option>
+                </select>
+
+                <h3 class="input-title">Select product category</h3>
+                <select id="product-category" class="drop-down" required>
+                </select>
+
+                <h3 class="input-title">Stocks available</h3>
+                <input id="stocks-available" type="text" class="input-container" placeholder="Enter quantity" required>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="button-container" >
+        <p id="message">message</p>
+        <button id="submit-button" form="product-details-form" type="submit">Submit</button>
+    </div>
+</form>

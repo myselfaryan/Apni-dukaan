@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const Order = require('../../models/order_details_model');
-const UserAuth = require('../../models/user_auth_model');
-const Product = require('../../models/product_details_model');
+const Order = require('../models/order_details_model');
+const UserAuth = require('../models/user_auth_model');
+const Product = require('../models/product_details_model');
 
 const multer = require('multer');
 const upload = multer();
