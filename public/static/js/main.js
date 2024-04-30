@@ -121,6 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
     button_action(add_product_button, 'product_details_entry_page.html', 'product_details_entry_page.css', 'product_details_entry_page.js');
     button_action(profile_button, 'profile_management.html', 'profile_management.css', 'profile_management.js');
     button_action(products_button, 'product.html', 'output.css', 'product.js');
-    button_action(dashboard_button, 'sales.html', 'output.css', 'sales.js');
+    button_action(dashboard_button, 'dashboard.html', 'output.css', 'dashboard.js');
+    
 
 });

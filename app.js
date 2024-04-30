@@ -4,6 +4,8 @@ const mongoose = require("mongoose");
 const cors = require("cors"); // Add this line to import CORS
 const path = require('path');
 
+
+
 const app = express();
 const port = 3000;
 
@@ -38,6 +40,7 @@ const productRoute = require("./controller/product_details");
 const salesRoute = require("./controller/sales");
 const userRoute = require("./controller/user");
 const urls = require("./urls");
+
 
 
 // Use Routes

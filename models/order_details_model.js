@@ -34,6 +34,44 @@ const orderSchema = new Schema({
         type: Boolean,
         enum: [true, false],
         required: true
+    },
+    name: {
+        type: String,
+        required: true,
+      },
+      email: {
+        type: String,
+        required: true,
+        unique: true,
+      },
+      shipping_address: {
+        type: String,
+        required: true,
+      },
+      billing_address: {
+        type: String,
+        required: true,
+      },
+      quantity: {
+        type: Number,
+        required: true,
+      },
+      
+    product_count:{
+        type:Number,
+        required:true
+    },
+    total_earning:{
+        type:Number,
+        required:true
+    },
+    total_order:{
+        type:Number,
+        required:true
+    },
+    unit_left:{
+        type:Number,
+        required:true
     }
 });
 
