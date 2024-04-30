@@ -24,9 +24,8 @@ app.use(
 );
 
 // Connect to MongoDB
-// mongoose.connect('mongodb://sudip:sudiphalder@localhost:27017/?authMechanism=DEFAULT', {
-mongoose.connect('mongodb://localhost:27017/', {
-    dbName: 'seller_app',
+mongoose.connect('mongodb+srv://shubh:Geeta%409569@cluster1.x2cdm2h.mongodb.net/', {
+    dbName: 'Cluster1',
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
@@ -36,6 +35,7 @@ mongoose.connect('mongodb://localhost:27017/', {
 
 const authRoute = require("./controller/auth");
 const productRoute = require("./controller/product_details");
+const salesRoute = require("./controller/sales");
 const userRoute = require("./controller/user");
 const urls = require("./urls");
 
@@ -45,6 +45,7 @@ app.use("/", urls);
 app.use("/api/auth", authRoute);
 app.use("/api/product", productRoute);
 app.use("/api/user", userRoute);
+app.use("/api/sales", salesRoute);
 
 app.listen(port, () => {
   console.log(`Server is listening at http://localhost:${port}`);

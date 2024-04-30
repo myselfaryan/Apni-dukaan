@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const dashboard_button = document.getElementById('dashboard-button');
     const profile_button = document.getElementById('profile-button');
     const products_button = document.getElementById('products-button');
+    const sales_button = document.getElementById('sales-button');
     const add_product_button = document.getElementById('add-product-button');
     const sidebar = document.getElementById('sidebar-panel');
     const hamburger = document.getElementById('hamburger-icon');
@@ -121,5 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
     button_action(add_product_button, 'product_details_entry_page.html', 'product_details_entry_page.css', 'product_details_entry_page.js');
     button_action(profile_button, 'profile_management.html', 'profile_management.css', 'profile_management.js');
     button_action(products_button, 'product.html', 'output.css', 'product.js');
-    button_action(dashboard_button, 'single_product.html', 'single_product.css', 'single_product.js');
+    button_action(dashboard_button, 'sales.html', 'output.css', 'sales.js');
+    button_action(sales_button, 'single_product.html', 'single_product.css', 'single_product.js');
+
 });

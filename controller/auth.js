@@ -75,8 +75,8 @@ router.post('/login', upload.none(), async (req, res) => {
     console.error(err.message);
     res.status(500).send('Server Error');
   }
-
 });
+
 
 router.post('/verify-otp', upload.none(), async (req, res) => {
   console.log('Request at /verify-otp');

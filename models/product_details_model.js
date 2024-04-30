@@ -6,11 +6,7 @@ const ProductSchema = new Schema({
         type: String,
         required: true,
     },
-    product_id: {
-        type: String,
-        required: true,
-        unique: true,
-    },
+    
     product_title: {
         type: String,
         required: true
@@ -51,10 +47,10 @@ const ProductSchema = new Schema({
         type: Number, // Changed to Number type
         required: true
     },
-    image_name: {
-        type: String,
-        required: true
-    },
+    // image_name: {
+    //     type: String,
+    //     required: true
+    // },
     date: {
         type: String,
         default: () => new Date().toISOString().split('T')[0].replace(/-/g, '-')
