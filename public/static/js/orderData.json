@@ -1,0 +1,39 @@
+{
+    "order_id": "123456",
+    "customer": {
+      "name": "Sushant Kuril",
+      "email": "jj@gmail.com",
+      "phone": "1********0"
+    },
+    "shipping_address": {
+      "street": "34AG, Rocky mount, chowk",
+      "city": "Ahmedabad",
+      "zipcode": "11111",
+      "country": "India"
+    },
+    "payment": {
+      "transaction_id": "#VHGF***735271600123",
+      "payment_method": "Paytm",
+      "cardholder_name": "sudip James",
+      "card_number": "************65"
+    },
+    "order_items": [
+      {
+        "product": {
+          "id": "3453DR",
+          "name": "Adidas Mens Restound M Running Shoe",
+          "discount" : 100,
+          "price": 1699
+        },
+        "quantity": 3,
+        "subtotal": 6969
+      }
+    ],
+    "logistics": {
+      "provider_name": "ABX Logistics",
+      "provider_email": "abx@gmail.com",
+      "tracking_number": "345ASCR676CHNJ9001",
+      "charge": 65
+    },
+    "total_amount": 5260
+  }

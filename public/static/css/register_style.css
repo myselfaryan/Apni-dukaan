@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.register1{
+    
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+   
+    
+
+}
+.features{
+    background-color: #1746A2;
+    
+    width: 50%;
+    
+   
+   
+   
+
+    
+}
+.create-account-form{
+    width: 40%;
+    height: 70%;
+    z-index: 3;
+    border-radius: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    
+}
+.features-2{
+    margin-left: 4%;
+    
+}
+
+.account-form{
+    height: 100%;
+    width: 100%;
+    margin-left: -10%;
+    margin-right: 10%;
+    border-radius: 6%;
+    padding: 6%;
+    background-color: white;
+    margin-left: 10%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    
+
+
+}
+.account-form form{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-right: 4%;
+    
+}
+.account-form form input{
+    height: 2rem;
+    border: 2px solid #dddddd;
+    border-radius: 0.1rem;
+}
+.features-2 h3{
+    font-size: 1.5rem;
+}
+
+
+
+.register1 {
+    width: 100%;
+    position: relative;
+    z-index: 1; /* Ensure this div is on top */
+}
+.svg-container {
+    position: absolute;
+    top: 47%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2; 
+
+}
+
+.glass-mor {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.5); /* Adjusted transparency */
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.6px);
+    -webkit-backdrop-filter: blur(7.6px);
+    border: 1px solid rgba(255, 255, 255, 0.58);
+    align-items: center;
+    /* justify-content: center; */
+    z-index: 1;
+}
+
+
+  
+  .hidden{
+    display:none;
+  }
