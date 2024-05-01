@@ -24,21 +24,19 @@ app.use(
 );
 
 // Connect to MongoDB
-mongoose
-  .connect(
-    "mongodb://sudip:sudiphalder@localhost:27017/?authMechanism=DEFAULT",
-    {
-      dbName: "seller_app",
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    },
-  )
-  .then(() => console.log("MongoDB Connected"))
-  .catch((err) => console.log(err));
+mongoose.connect('mongodb+srv://shubh:Geeta%409569@cluster1.x2cdm2h.mongodb.net/', {
+    dbName: 'Cluster1',
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+.then(() => console.log('MongoDB Connected'))
+.catch(err => console.log(err));
+
 
 const adminRoute = require("./controller/admin");
 const authRoute = require("./controller/auth");
 const productRoute = require("./controller/product_details");
+const salesRoute = require("./controller/sales");
 const userRoute = require("./controller/user");
 const urls = require("./urls");
 
@@ -49,6 +47,7 @@ app.use("/api/admin", adminRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/product", productRoute);
 app.use("/api/user", userRoute);
+app.use("/api/sales", salesRoute);
 
 app.listen(port, () => {
   console.log(`Server is listening at http://localhost:${port}`);
