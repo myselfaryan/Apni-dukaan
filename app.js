@@ -36,6 +36,7 @@ mongoose
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));
 
+const adminRoute = require("./controller/admin");
 const authRoute = require("./controller/auth");
 const productRoute = require("./controller/product_details");
 const userRoute = require("./controller/user");
@@ -44,6 +45,7 @@ const urls = require("./urls");
 
 // Use Routes
 app.use("/", urls);
+app.use("/api/admin", adminRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/product", productRoute);
 app.use("/api/user", userRoute);

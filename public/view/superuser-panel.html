@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./static/css/superuser-panel.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="sidebar">
+            <div id="colors">
+
+            </div>
+            <button id="manager">MANAGER</button>
+            <br>
+            <button id="user">USER</button>
+            <div id="bot-color">
+            </div>
+        </div>
+        <div class="content">
+            <div id="top-bar">
+                <p id="admin-head">Admin Panel</p>
+            </div>
+            <form action="" class="find">
+                <label for="search"></label>
+                <input type="text" id="searchi" name="search" placeholder="Search">
+                <button type="submit" class="search"><img id="search-img" src="search1.png" alt="search"></button>
+            </form>
+            <div class="editter">
+                <div id="manager-details">
+                    <p id="details">Manager Details</p>
+                </div>
+                <form id="edit-butt">
+                    <label for="name">Name - </label>
+                    <input type="text" id="name" name="name">
+                    <label for="email">Email - </label>
+                    <input type="text" id="email" name="email">
+                    <input type="submit" id="update" value="UPDATE">
+                </form>
+            </div>
+            <div class="deleter">
+                <button id="del-butt">DELETE-MANAGER</button>
+            </div>
+            <div class="adder">
+                <button id="adder-butt">ADD-MANAGER</button>
+            </div>
+            <div id="add-manager">
+                <p style="margin-left: 120px; margin-top: 30px; font-size: 40px;">CREATE MANAGER</p>
+                <form action="">
+                    <div id="manage-name">
+                        <label for="">Name</label>
+                        <input type="text" name="manager-name" id="manager-name"
+                            style="width: 250px; background-color: #a7a6a6;">
+                    </div>
+                    <div id="manage-email">
+                        <label for="">Email</label>
+                        <input type="text" name="manager-email" id="manager-email"
+                            style="width: 280px; background-color: #a7a6a6;">
+                    </div>
+                    <div id="manage-password">
+                        <label for="">Password</label>
+                        <input type="text" name="manager-password" id="manager-password"
+                            style="width: 280px; background-color: #a7a6a6;">
+                    </div>
+                    <input type="submit" style="margin-left: 190px; margin-top: 40px; width: 170px; height: 40px; background-color: rgb(2, 93, 93); font-size: 18px;
+                    color: rgb(200, 255, 0); " value="Create Manager" id="submit-manager">
+                </form>
+            </div>
+            <div class="users">
+                <div id="header">
+                    <p id="head">MANAGER'S</p>
+                </div>
+                <div id="managers-list">
+                </div>
+            </div>
+            <div class="permissions">
+                <p id="permision-header">PERMISSIONS</p>
+                <form class="permision-form">
+                    <label for="DELETE" style="margin-left: 25px;" class="form">DELETE END USER</label>
+                    <input type="checkbox" name="delete" id="delete-user-permission">
+                    <label for="EDIT" style="margin-left: 50px;" class="form">EDIT USER PROFILE</label>
+                    <input type="checkbox" name="edit" id="update-user-permission">
+                    <label for="ADD" style="margin-left: 50px;" class="form">ADD PRODUCTS</label>
+                    <input type="checkbox" name="add" id="update-product-permission">
+                    <br>
+                    <input type="submit" id="update-permissions-button" name="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./static/js/superuser-panel.js"></script>
+</body>
+
+</html>

@@ -30,7 +30,9 @@ loginButton.addEventListener('click', (event) => {
         .catch((error) => {
             console.error('Error:', error);
         });
-});const register1 = document.querySelector('.register1');
+});
+
+const register1 = document.querySelector('.register1');
 const leftimgview = register1.querySelector('.features');
 const accountform = register1.querySelector('.create-account-form')
 

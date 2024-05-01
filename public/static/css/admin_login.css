@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(90, 87, 87);
+}
+#head{
+    padding-top: 20px;
+    text-align: center;
+    color: rgb(200, 255, 0);
+    margin-top: 0px;
+    height: 65px;
+    font-size: 30px;
+}
+.header{
+    background-color: rgb(2, 93, 93);
+    width: 450px;
+}
+.login{
+    margin-left: 450px;
+    margin-top: 150px;
+    border: 2px solid black;
+    height: 320px;
+    width: 450px;
+    background-color: rgb(43, 42, 42);
+}
+#email{
+    margin-left: 45px;
+    width: 350px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+#password{
+    margin-left: 45px;
+    width: 350px;
+    padding-bottom: 5px;
+}
+#submit-button{
+    margin-top: 25px;
+    margin-left: 200px;
+    height: 30px;
+    width: 70px;
+    background-color: rgb(2, 93, 93)  ;
+    color: white;
+}
+.main{
+    margin-top: 50px;
+    margin-right: 60px;
+}

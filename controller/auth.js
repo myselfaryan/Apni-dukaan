@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();
+
+
 // const bcrypt = require('bcryptjs');
 const UserAuth = require('../models/user_auth_model');
 const TempUser = require('../models/temp_user_auth_model');
@@ -13,7 +15,7 @@ const upload = multer();
 
 const path = require('path');
 router.get('/ping', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../public/views/index.html'));
+  res.status(200).send('pong');
   console.log('Request at /ping');
 });
 

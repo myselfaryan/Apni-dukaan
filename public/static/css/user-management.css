@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(43, 42, 42);
+}
+.sidebar {
+    border: 0.2px solid rgb(61, 61, 61);
+    width: 20%;
+    height: 800px;
+}
+
+.content {
+    border: 1px solid black;
+    width: 80%;
+    height: 100vh;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
+#user{
+    margin-top: 40px;
+    margin-left: 50px;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(2, 93, 93);
+    color: rgb(200, 255, 0);
+    font-size: 15px;
+}
+
+.find {
+    margin-top: 50px
+}
+
+#search-img {
+    height: 13px;
+}
+
+#search {
+    width: 750px;
+    height: 25px;
+    margin-left: 90px;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    /* background-color: rgb(235, 231, 231); */
+    background-color: #a7a6a6;
+    border: 1px orangered;
+}
+
+.search {
+    margin-right: 50px;
+    width: 40px;
+    background-color: rgb(240, 98, 46);
+    box-shadow: 10px;
+    transition: none;
+    border: 0px;
+    height: 25px;
+}
+.users {
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 500px;
+    height: 490px;
+    border: 1px solid black;
+    overflow-y: scroll;
+    /* color: rgba(255, 255, 255, 0.781); */
+    color: rgb(157, 200, 2);
+}
+#header {
+    text-align: center;
+    /* border: 1px solid black; */
+    background-color: rgb(2, 93, 93);
+    color: rgb(200, 255, 0);
+
+}
+
+#head {
+    font-size: 30px;
+}
+
+.bottle {
+    margin-top: 20px;
+    margin-left: 20px;
+    overflow-y: scroll;
+}
+
+.bottle > div {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.bottle > div p {
+    margin-bottom: 0;
+    margin-right: 20px;
+}
+
+.bottle > div input[type="checkbox"] {
+    margin-left: auto;
+    margin-right: 110px;
+}
+.permissions{
+    margin-top: 150px;
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 150px;
+    background-color: rgb(2, 93, 93);
+    color: rgb(200, 255, 0);
+}
+.permision-form{
+    margin-top: 20px;
+    margin-left: 120px;
+}
+.form{
+    font-size: 20px;
+}
+#top-bar{
+    width: 1159;
+    height: 50px;
+    background-color: rgb(2, 93, 93);
+    color: rgb(200, 255, 0);
+}
+#admin-head{
+    margin-left: 350px;
+    font-size: 40px;
+}
+.editter{
+    margin-left: 600px;
+    position: absolute;
+    margin-top: 100px;
+    /* border: 1px solid black; */
+    width: 250px;
+    height: 250px;
+}
+.deleter{
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 750px;
+}
+.edittor{
+    margin-bottom: 100px;
+}
+#details{
+    margin-top: 20px;
+    margin-left: 25px;
+    font-size: 30px;
+}
+#name{
+    margin-bottom: 10px;
+    background-color: #a7a6a6;
+}
+#email{
+    background-color: #a7a6a6;
+}
+#update{
+    margin-top: 20px;
+    margin-left: 5px;
+    width: 100px;
+    height: 30px;
+    background-color: rgb(2, 93, 93);
+    color: rgb(200, 255, 0);
+}
+#manager-details{
+    margin-top: 0px;
+    height: 350px;
+    background-color: rgb(2, 93, 93);
+    color: rgb(200, 255, 0);
+    margin-top: 0px;
+}
+#colors{
+    height: 50px;
+    background-color: rgb(2, 93, 93);
+}
+#bot-color{
+    background-color: rgb(2, 93, 93);
+    margin-top: 535px;
+    width: 294px;
+    height: 150px;
+    position: absolute;
+}
+#adding{
+    margin-right: 100px;
+    width: 150px;
+}
+.user-finder{
+
+    position: absolute;
+    border: 1px solid black;
+    margin-left: 250px;
+    margin-top: 100px;
+    width: 950px;
+    height: 400px;
+    z-index: 2;
+    background-color: rgb(30, 29, 29);
+    box-shadow: 0 25px 50px -12px rgba(255, 255, 255, 0.25);
+    
+}
+#searching-label-user{
+    margin-left: 200px;
+    margin-top: 70px;
+    color: rgb(200, 255, 0);
+    font-size: 40px;
+}
+#user-number-search{
+    margin-left: 50px;
+    margin-right: 200px;
+    width: 250px;
+    height: 22px;
+}
+.user-form{
+    margin-top: 100px;
+    margin-left: 70px;
+}
+.submit-user{
+    margin-left: 280px;
+    font-size: 30px;
+    width: 220px;
+    height: 40px;
+    margin-top: 40px;
+    background-color: rgb(2, 93, 93);
+    color: rgb(200, 255, 0);
+}
+#find-user-header{
+    color: white;
+    margin-top: 10px;
+    font-size: 50px;
+    margin-left: 350px;
+    color: rgb(200, 255, 0);
+}
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Add space between each label-input pair */
+}
+
+.user-info{
+    display: none;
+}
+/* Style for form labels */
+.user-info label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Style for form inputs */
+.user-info input[type="text"],
+.user-info input[type="email"],
+.user-info input[type="tel"] {
+    width: 320px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    background-color: #a7a6a6;
+    height: 20px;
+}
+
+#user-update-button{
+    margin-left: 150px;
+    margin-top: 1px;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    background-color: rgb(2, 93, 93);
+    color: rgb(200, 255, 0);
+}
+#edit-product{
+    margin-top: 60px;
+    margin-left: 30px;
+    width: 200px;
+    height: 70px;
+    font-size: 20px;
+    background-color: rgb(2, 93, 93);
+    color: rgb(200, 255, 0);
+    box-shadow: 0 25px 50px -12px rgba(255, 255, 255, 0.25);
+
+}
+#delete-user-button{
+    margin-top: 40px;
+    margin-left: 30px;
+    width: 200px;
+    height: 70px;
+    font-size: 20px;
+    background-color: rgb(2, 93, 93);
+    color: rgb(200, 255, 0);
+    box-shadow: 0 25px 50px -12px rgba(255, 255, 255, 0.25);
+
+}
+#manager{
+    margin-top: 150px;
+    margin-left: 50px;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(2, 93, 93);
+    color: rgb(200, 255, 0);
+    font-size: 15px;
+}
+

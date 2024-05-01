@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="upd_products.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="sidebar">
+            <div id="colors"></div>
+            <button id="manager">MANAGER</button>
+            <br>
+            <button id="user">USER</button>
+            <div id="bot-color"></div>
+        </div>
+        <div class="content">
+            <div id="top-bar">
+                <p id="admin-head">Admin Panel</p>
+            </div>
+            <form action="" class="find">
+                <label for="search"></label>
+                <input type="text" id="searchi" name="search" placeholder="Search Product">
+                <button type="submit" class="search"><img id="search-img" src="search1.png" alt="search"></button>
+            </form>
+            <div class="editter">
+                <div id="edit-butt">
+                    <div id="manager-details">
+                        <p id="details">Product Details</p>
+                    </div>
+                    <form action="">
+                        <div class="form-group">
+                            <label for="product_name">Product Name - </label>
+                            <input type="text" id="product_name" name="product_name" class="products-sub">
+                        </div>
+                        <div class="form-group">
+                            <label for="product_description">Description - </label>
+                            <textarea id="product_description" name="product_description"
+                                class="products-sub"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="discount">Discount - </label>
+                            <input type="number" id="discount" name="discount" class="products-sub">
+                        </div>
+                        <div class="form-group">
+                            <label for="offers">Offers - </label>
+                            <input type="text" id="offers" name="offers" class="products-sub">
+                        </div>
+                        <div class="form-group">
+                            <label for="brand">Brand - </label>
+                            <input type="text" id="brand" name="brand" class="products-sub">
+                        </div>
+                        <div class="form-group">
+                            <label for="original_price">Price - </label>
+                            <input type="number" id="original_price" name="original_price" class="products-sub">
+                        </div>
+                        <input type="submit" id="update" value="UPDATE"
+                            style="margin-top: 3cqb; width: 150px; margin-left: 50px; height: 40px;">
+                    </form>
+                </div>
+            </div>
+
+            <div class="users">
+                <div id="header">
+                    <p id="head">PRODUCTS</p>
+                </div>
+                <div class="bottle">
+                    <div id="Colgate_Toothbrush">
+                        <p>Colgate Toothbrush</p>
+                        <input type="checkbox">
+                    </div>
+                    <div id="Mamaearth_Shampoo" class="spacer">
+                        <p>Mamaearth Shampoo</p>
+                        <input type="checkbox">
+                    </div>
+                    <div id="Dove_Soap">
+                        <p>Dove Soap</p>
+                        <input type="checkbox">
+                    </div>
+                    <div id="Wonder_Bread">
+                        <p>Wonder Bread</p>
+                        <input type="checkbox">
+                    </div>
+                    <div id="Amul_Milk">
+                        <p>Amul Milk</p>
+                        <input type="checkbox">
+                    </div>
+                    <div id="Organic_Eggs" class="spacer">
+                        <p>Organic Eggs</p>
+                        <input type="checkbox">
+                    </div>
+                    <div id="Nescafe_Coffee">
+                        <p>Nescafe Coffee</p>
+                        <input type="checkbox">
+                    </div>
+                    <div id="Basmati_Rice">
+                        <p>Basmati Rice</p>
+                        <input type="checkbox">
+                    </div>
+                    <div id="Barilla_Pasta" class="spacer">
+                        <p>Barilla Pasta</p>
+                        <input type="checkbox">
+                    </div>
+                    <div id="Idaho_Potatoes">
+                        <p>Idaho Potatoes</p>
+                        <input type="checkbox">
+                    </div>
+                    <div id="Vine-Ripened_Tomatoes">
+                        <p>Vine-Ripened Tomatoes</p>
+                        <input type="checkbox">
+                    </div>
+                    <div id="Sweet_Onions" class="spacer">
+                        <p>Sweet Onions</p>
+                        <input type="checkbox">
+                    </div>
+                    <div id="Foster_Farms_Chicken">
+                        <p>Foster Farms Chicken</p>
+                        <input type="checkbox">
+                    </div>
+                    <div id="Angus_Beef">
+                        <p>Angus Beef</p>
+                        <input type="checkbox">
+                    </div>
+                    <div id="Atlantic_Salmon" class="spacer">
+                        <p>Atlantic Salmon</p>
+                        <input type="checkbox">
+                    </div>
+                </div>
+            </div>
+            <div class="permissions">
+                <button id="del-prod">DELETE-PRODUCT</button>
+            </div>
+        </div>
+    </div>
+    <script src="upd_products.js"></script>
+</body>
+
+</html>
