@@ -50,8 +50,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     document.getElementById('address-input').value = currentUserData.personal_address;
                     var user_finder = document.querySelector('.user-finder');
                     user_finder.style.display = 'none';
-                    var user_info = document.querySelector('.user-info');
-                    user_info.style.display = 'block';
+                    // var user_info = document.querySelector('.user-info');
+                    // user_info.style.display = 'block';
+                    document.getElementById('user-details-container').style.display = 'block';
+                    document.getElementById('footer').style.display = 'block';
                 }
             })
             .catch((error) => {

@@ -44,7 +44,6 @@ function createItemDiv(item) {
 </svg>
 
     <!-- Add your action logic here --></div>
-  
   `;
   return itemDiv;
 }

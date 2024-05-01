@@ -6,7 +6,7 @@ const Product = require('../models/product_details_model');
 const UserAuth = require('../models/user_auth_model');
 
 router.get('/ping', (req, res) => {
-    res.send('Namaste! Welcome to the products API.');
+    res.send('Namaste! Welcome to the products.');
     console.log('Request at /');
 });
 

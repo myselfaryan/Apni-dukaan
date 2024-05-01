@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (data.status == 'ok') {
                     localStorage.setItem('token', data.token);
                     console.log("token"+data.token);
-                    window.alert("ok")
                     if (data.admin_type == 'manager') {
                         window.location.href = '/user-management';
                     } else {

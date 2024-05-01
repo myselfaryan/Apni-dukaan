@@ -135,3 +135,10 @@ fetch("http://localhost:3000/api/sales/get-orders", {
 loadChartJs()
     .then(initDashboard)
     .catch(error => console.error('Error loading Chart.js:', error));
+
+const logoutButton = document.getElementById('logout-button');
+logoutButton.addEventListener('click', () => {
+    localStorage.removeItem('user_auth_token');
+    // window.location.href = 'http://localhost:3000/login';
+    window.location.reload();
+});

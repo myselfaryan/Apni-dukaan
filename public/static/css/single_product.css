@@ -90,7 +90,7 @@ body {
 }
 .header {
   height: 7.563rem;
-  width: 67%;
+  width: 79%;
   margin: 0 !important;
   position: absolute;
   top: 0;
@@ -200,6 +200,7 @@ body {
   height: 0.856rem;
   width: 1.231rem;
   position: relative;
+  left: 2rem;
 }
 .jjgmailcom {
   position: relative;
@@ -208,6 +209,7 @@ body {
   display: inline-block;
   min-width: 5.563rem;
   white-space: nowrap;
+  left: 2rem;
 }
 .email {
   flex: 1;
@@ -1231,8 +1233,9 @@ body {
   font-size: var(--para-h2-reg-size);
   color: var(--gray-black);
   font-family: var(--para-h3-reg);
-  margin-left: 20rem;
+  margin-left: 5rem;
   margin-bottom: 5rem;
+  overflow-x: hidden;
 }
 @media screen and (max-width: 600px) {
   .frame-parent {

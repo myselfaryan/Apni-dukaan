@@ -113,7 +113,7 @@ function updateUI(item) {
   // productElement.classList.add('div3');
   productsList.innerHTML = `
       <div style="display: flex; align-items: center;">
-        <img class="child" loading="lazy" alt="" src="./static/images/shoes.svg" />
+       <!-- <img class="child" loading="lazy" alt="" src="./static/images/shoes.svg" /> -->
         <div class="adidas-mens-restound-m-running-wrapper">
           <div class="adidas-mens-restound" style="margin-left:40px;">${item.product_title}</div>
         </div>
