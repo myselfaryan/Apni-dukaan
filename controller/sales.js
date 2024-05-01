@@ -63,6 +63,9 @@ router.post('/get-orders',upload.none(), async (req, res) => {
 
     const user_auth_token = req.body.user_auth_token;
     console.log("token"+user_auth_token);
+    const orderID = req.body.order_id;
+    console.log("orderID"+orderID);
+    
     try {
         const user_auth = await UserAuth.findOne({ user_auth_token });
 
@@ -70,7 +73,7 @@ router.post('/get-orders',upload.none(), async (req, res) => {
             return res.status(400).json({ msg: 'User not found', status: 'error' });
         }
         
-        const products = await Order.find({ personal_contact_number: user_auth.personal_contact_number });
+        const products = await Order.find({ personal_contact_number: user_auth.personal_contact_number});
 
         return res.status(200).json({ products: products, status: 'ok' });
     } catch (err) {
@@ -79,11 +82,14 @@ router.post('/get-orders',upload.none(), async (req, res) => {
     }
 });
 
-router.post('/get-orders-details',upload.none(), async (req, res) => {
+router.post('/get-order-details',upload.none(), async (req, res) => {
     console.log('Request at /get-orders');
 
     const user_auth_token = req.body.user_auth_token;
     console.log("token"+user_auth_token);
+    const orderID = req.body.order_id;
+    console.log("orderID"+orderID);
+    
     try {
         const user_auth = await UserAuth.findOne({ user_auth_token });
 
@@ -91,7 +97,7 @@ router.post('/get-orders-details',upload.none(), async (req, res) => {
             return res.status(400).json({ msg: 'User not found', status: 'error' });
         }
         
-        const products = await Order.find({ personal_contact_number: user_auth.personal_contact_number });
+        const products = await Order.find({ personal_contact_number: user_auth.personal_contact_number, _id: orderID});
 
         return res.status(200).json({ products: products, status: 'ok' });
     } catch (err) {

@@ -1,7 +1,9 @@
 const user_auth_token = localStorage.getItem('user_auth_token');
+const orderId = localStorage.getItem('order_id');
 const authsFormData = new FormData();
 authsFormData.append('user_auth_token', user_auth_token);
-console.log("tokn"+user_auth_token)
+authsFormData.append('order_id', orderId);
+console.log("tokn" + user_auth_token)
 
 const orderEndpoint = "static/js/orderData.json";
 
@@ -22,9 +24,11 @@ const orderEndpoint = "static/js/orderData.json";
 //     .catch(error => {
 //         console.error('Error fetching profile image:', error);
 //     });
-    
-    // Send a request to fetch orders
-fetch("http://localhost:3000/api/sales/get-orders-details", {
+
+// Send a request to fetch orders
+
+
+fetch("http://localhost:3000/api/sales/get-order-details", {
   method: "POST",
   body: authsFormData // Remove quotes around authsFormData
 })
@@ -43,24 +47,24 @@ fetch("http://localhost:3000/api/sales/get-orders-details", {
     console.error(error);
   });
 
-  async function fetchOrderData() {
-    try {
-      const response = await fetch(orderEndpoint);
-      if (!response.ok) {
-        console.error(`HTTP error! status: ${response.status}`);
-      } else {
-        const orderData = await response.json();
-        return orderData;
-      }
-    } catch (error) {
-      console.error('Error fetching order data:', error);
+async function fetchOrderData() {
+  try {
+    const response = await fetch(orderEndpoint);
+    if (!response.ok) {
+      console.error(`HTTP error! status: ${response.status}`);
+    } else {
+      const orderData = await response.json();
+      return orderData;
     }
+  } catch (error) {
+    console.error('Error fetching order data:', error);
   }
+}
 
-  function calculateSubTotal(price, quantity) {
-    const subtotal = price * quantity;
-    return subtotal;
-  }
+function calculateSubTotal(price, quantity) {
+  const subtotal = price * quantity;
+  return subtotal;
+}
 
 // Function to calculate total bill
 function calculateTotalBill(items) {
@@ -84,30 +88,30 @@ function calculateTotalBill(items) {
   };
 }
 
-  // Function to update the UI with order data
-  function updateUI(item) {
-    // Update customer details
-    document.querySelector('.order-id').textContent = "Order ID : " +"#"+item._id;
-    document.querySelector('.jonathan-james').textContent = item.name;
-    document.querySelector('.jjgmailcom').textContent = item.email;
-    document.querySelector('.order-processed-label').textContent = item.personal_contact_number;
+// Function to update the UI with order data
+function updateUI(item) {
+  // Update customer details
+  document.querySelector('.order-id').textContent = "Order ID : " + "#" + item._id;
+  document.querySelector('.jonathan-james').textContent = item.name;
+  document.querySelector('.jjgmailcom').textContent = item.email;
+  document.querySelector('.order-processed-label').textContent = item.personal_contact_number;
 
-    // Update shipping address
-    document.querySelector('.jonathan-james1').textContent = item.name;
-    document.querySelector('.ag-rocky-mount').textContent = item.shipping_address;
-    // document.querySelector('.ag-rocky-mount').textContent = item.shipping_address.street;
-    // document.querySelector('.ahmedabad-11111').textContent = `${item.shipping_address.city} - ${item.shipping_address.zipcode}`;
-    // document.querySelector('.india').textContent = item.shipping_address.country;
+  // Update shipping address
+  document.querySelector('.jonathan-james1').textContent = item.name;
+  document.querySelector('.ag-rocky-mount').textContent = item.shipping_address;
+  // document.querySelector('.ag-rocky-mount').textContent = item.shipping_address.street;
+  // document.querySelector('.ahmedabad-11111').textContent = `${item.shipping_address.city} - ${item.shipping_address.zipcode}`;
+  // document.querySelector('.india').textContent = item.shipping_address.country;
 
-    
-    // Update product details
-    const productsList = document.querySelector('.products-list');
-    // productsList.innerHTML = '';
-    // if (Array.isArray(data)) {
-    //   data.forEach(item => {
-      // const productElement = document.createElement('div');
-      // productElement.classList.add('div3');
-      productsList.innerHTML = `
+
+  // Update product details
+  const productsList = document.querySelector('.products-list');
+  // productsList.innerHTML = '';
+  // if (Array.isArray(data)) {
+  //   data.forEach(item => {
+  // const productElement = document.createElement('div');
+  // productElement.classList.add('div3');
+  productsList.innerHTML = `
       <div style="display: flex; align-items: center;">
         <img class="child" loading="lazy" alt="" src="./static/images/shoes.svg" />
         <div class="adidas-mens-restound-m-running-wrapper">
@@ -122,44 +126,44 @@ function calculateTotalBill(items) {
           </div>
         </div>
       </div>`;
-      
-      
-      const subtotal = calculateSubTotal(item.original_price, item.quantity);
-      productsList.querySelector('.div6').textContent = `₹ ${subtotal}`;
-      // productsList.appendChild(productElement);
+
+
+  const subtotal = calculateSubTotal(item.original_price, item.quantity);
+  productsList.querySelector('.div6').textContent = `₹ ${subtotal}`;
+  // productsList.appendChild(productElement);
   //   });
   // } else {
   //   console.error('Data is not an array:', data);
   // }
-    
-    // Update logistics details
-    // document.querySelector('.abx-logistics').textContent = orderData.logistics.provider_name;
-    // document.querySelector('.abxgmailcom').textContent = orderData.logistics.provider_email;
-    // document.querySelector('.id-345ascr676chnj9001').textContent = `Id : ${orderData.logistics.tracking_number}`;
-    // document.querySelector('.amount-charged').textContent = `Amount charged : ₹ ${orderData.logistics.charge}`;
-    // document.querySelector('.payment-method1').textContent = `Payment method : ${orderData.payment.payment_method}`;
-    
-    const totalBill = calculateTotalBill(item);
-    document.querySelector('.div16').textContent = `₹ ${totalBill.subtotal}`;
-    document.querySelector('.div17').textContent = `₹ ${totalBill.discount}`;
-    // document.querySelector('.div18').textContent = `₹ ${totalBill.logistics}`;
-    document.querySelector('.div19').textContent = `₹ ${totalBill.tax}`;
-    document.querySelector('.b').textContent = `₹ ${totalBill.totalAmount}`;
-    
-    // Update payment details
-    // document.querySelector('.vhgf735271600123').textContent = orderData.payment.transaction_id;
-    document.querySelector('.paytm').textContent = item.payment_method;
-    document.querySelector('.joseph-james').textContent = item.name;
-    // document.querySelector('.div1').textContent = `**** **** **${item.payment.card_number.slice(-4)}`;
-    document.querySelector('.div2').textContent = `₹ ${totalBill.totalAmount}`;
-  }
 
-  // Call the functions to fetch and update the UI
-  // fetchOrderData()
-  // .then(orderData => {
-  //     updateUI(orderData);
-  //     console.log("Order data fetched successfully:", orderData)
-  //   })
-  //   .catch(error => {
-  //     console.error('Error updating UI:', error);
-  //   });
+  // Update logistics details
+  // document.querySelector('.abx-logistics').textContent = orderData.logistics.provider_name;
+  // document.querySelector('.abxgmailcom').textContent = orderData.logistics.provider_email;
+  // document.querySelector('.id-345ascr676chnj9001').textContent = `Id : ${orderData.logistics.tracking_number}`;
+  // document.querySelector('.amount-charged').textContent = `Amount charged : ₹ ${orderData.logistics.charge}`;
+  // document.querySelector('.payment-method1').textContent = `Payment method : ${orderData.payment.payment_method}`;
+
+  const totalBill = calculateTotalBill(item);
+  document.querySelector('.div16').textContent = `₹ ${totalBill.subtotal}`;
+  document.querySelector('.div17').textContent = `₹ ${totalBill.discount}`;
+  // document.querySelector('.div18').textContent = `₹ ${totalBill.logistics}`;
+  document.querySelector('.div19').textContent = `₹ ${totalBill.tax}`;
+  document.querySelector('.b').textContent = `₹ ${totalBill.totalAmount}`;
+
+  // Update payment details
+  // document.querySelector('.vhgf735271600123').textContent = orderData.payment.transaction_id;
+  document.querySelector('.paytm').textContent = item.payment_method;
+  document.querySelector('.joseph-james').textContent = item.name;
+  // document.querySelector('.div1').textContent = `**** **** **${item.payment.card_number.slice(-4)}`;
+  document.querySelector('.div2').textContent = `₹ ${totalBill.totalAmount}`;
+}
+
+// Call the functions to fetch and update the UI
+// fetchOrderData()
+// .then(orderData => {
+//     updateUI(orderData);
+//     console.log("Order data fetched successfully:", orderData)
+//   })
+//   .catch(error => {
+//     console.error('Error updating UI:', error);
+//   });

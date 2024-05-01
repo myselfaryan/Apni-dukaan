@@ -101,6 +101,18 @@ fetch("http://localhost:3000/api/sales/get-orders", {
       itemsContainer.appendChild(itemDiv);
     });
   })
+  .then(()=>{
+    const itemDivs = document.querySelectorAll('.order-row ');
+    itemDivs.forEach(div => {
+      div.addEventListener('click', function () {
+          const id = div.id;
+          console.log(id);
+          localStorage.setItem('order_id',id);
+          window.location.href = '/order-details';
+      });
+  });
+
+  })
   .catch(error => {
     // Handle any errors
     console.error(error);
@@ -108,8 +120,9 @@ fetch("http://localhost:3000/api/sales/get-orders", {
 
 function createItemDiv(item) {
   var itemDiv = document.createElement("div");
+  itemDiv.id = item._id;
   itemDiv.className =
-    "entry flex flex-row bg-white mt-0.5 p-4 shadow-lg justify-between";
+    "order-row entry flex flex-row bg-white mt-0.5 p-4 shadow-lg justify-between";
   itemDiv.innerHTML = `
     <div id="itemID" class="w-2/9 text-xs">${item._id}</div>
     <div class="w-1/9">${item.personal_contact_number}</div>

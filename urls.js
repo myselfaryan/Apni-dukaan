@@ -23,6 +23,11 @@ router.get('/main', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/view/main.html'));
 });
 
+router.get('/order-details', (req, res) => {
+    console.log('Request at /order-details');
+    res.sendFile(path.join(__dirname, 'public/view/single_product.html'));
+});
+
 router.get('/admin', (req, res) => {
     console.log('Request at /admin');
     res.sendFile(path.join(__dirname, 'public/view/admin_login.html'));

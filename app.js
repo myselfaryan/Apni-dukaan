@@ -24,8 +24,8 @@ app.use(
 );
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://shubh:Geeta%409569@cluster1.x2cdm2h.mongodb.net/', {
-    dbName: 'Cluster1',
+mongoose.connect('mongodb://sudip:sudiphalder@localhost:27017/?authMechanism=DEFAULT', {
+    dbName: 'seller_app',
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
