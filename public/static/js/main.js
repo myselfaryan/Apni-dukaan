@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const dashboard_button = document.getElementById('dashboard-button');
     const profile_button = document.getElementById('profile-button');
     const products_button = document.getElementById('products-button');
+    const sales_button = document.getElementById('sales-button');
     const add_product_button = document.getElementById('add-product-button');
     const sidebar = document.getElementById('sidebar-panel');
     const hamburger = document.getElementById('hamburger-icon');
