@@ -178,7 +178,6 @@ router.post('/admin-login', upload.none(), async (req, res) => {
         }
 
         if (verified_user) {
-            console.log("loggedin")
             return res.status(200).json({
                 token: user.token,
                 admin_type: user.admin_type,
