@@ -8,7 +8,7 @@ This web interface provides easy access to business profile management for selle
 
 ## Tech Stack
 
-- Frontend: ReactJS
+- Frontend: HTML, CSS, JavaScript
 - Backend: NodeJS, ExpressJS
 - Database: MongoDB
 
